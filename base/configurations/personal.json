@@ -1,0 +1,12 @@
+{
+    "user":{
+        "name": "Prince"
+    },
+    "account":{
+        "type":1
+        
+    },
+    "assistant":{
+        "name":"Jali"
+    }
+}

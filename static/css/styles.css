@@ -1,0 +1,228 @@
+:root{
+    --primary-color: #fff;
+    --secondary-color: #fff;
+    --background-color: #020202;
+    --accent-color: #001749;
+    --text-color: #fff;
+    --border-color:#9cbbff8e;
+    /* --border-radius: 40px; */
+    --blur-accent: #546ea546;
+    --theme: #6f95e7;
+    --blur: 3px;
+}
+
+/* effects */
+@keyframes glow {
+    0% { box-shadow: 0 0 5px var(--border-color); }
+    50% { box-shadow: 0 0 30px var(--border-color); }
+    100% { box-shadow: 0 0 5px var(--border-color); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-3px); }
+    100% { transform: translateY(0px); }
+}
+
+body{
+    background-color: var(--background-color);
+    background-image: url(cubes.png);
+    color: var(--text-color);
+    font-weight: 800;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* border: 3px solid var(--blur-accent); */
+    /* border-radius: 30px; */
+    /* animation: glow 4s ease-in-out infinite; */
+    /* text-shadow: 0px 0px 1px #fff; */
+}
+
+a{
+    color: #6f95e7;
+    text-decoration: none;
+
+}
+
+.statusbar{
+    background-color: var(--blur-accent);
+    display: flex;
+    display: flex;
+    padding: 10px;
+    top: 10px;
+    width: fit-content;
+    margin: auto;
+    border-radius: var(--border-radius);
+    backdrop-filter: blur(var(--blur));
+    animation: float 4s ease-in-out infinite;
+    transform: translate(-50%, -50%);
+    box-shadow: 3px 3px 10px #00000058;
+    border-radius: 50px;
+    transition-duration: 300ms;
+}
+
+.statusbar:hover{
+    animation: float 1s ease-in-out infinite;
+    font-weight: 800;
+}
+
+.statusbar div{
+    /* background-color: #020202; */
+    border: 1px solid grey;
+}
+
+.notification-icon{
+    /* background-color: aliceblue; */
+    margin: auto;
+
+}
+
+/* Basic styling for popovers */
+.popover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Ensure it appears above regular content */
+    background-color: var(--blur-accent);
+    backdrop-filter: blur(3px);
+    color: var(--border-color);
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+}
+
+/* Centering content in popovers */
+.popover-content, .modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: center;
+}
+
+.popover button{
+    background-color: #ffffff00;
+    padding: 5px;
+    font-size: 18px;
+    /* font-weight: 600; */
+    border: 2px solid #b6b6b600;
+    border-radius: 10px;
+    margin: 10px;
+    color: #585858;
+}
+
+.popover button:hover{
+    background-color: #b6b6b600;
+}
+
+.popover textarea{
+    background-color: var(--secondary-color);
+    border: 2px solid rgba(255, 255, 255, 0.281);
+    border-radius: 3px;
+    padding: 5px;
+    margin: 5px;
+    min-width: 400px;
+}
+
+.popover-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+}
+.badge{
+    font-size: x-small;
+    padding: 10px;
+    background: rgb(0, 62, 82);
+    border-radius: 50px;
+    color: #fff;
+    margin: 1px
+}
+
+/* .main{} */
+.hidden{
+    display: none;
+}
+
+.taskbar{
+    background-color: var(--blur-accent);
+    position: absolute;
+    display: flex;
+    padding: 10px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    margin: 10px;
+    justify-content: space-between;
+    border-radius: var(--border-radius);
+    backdrop-filter: blur(var(--blur));
+    box-shadow: 2px 2px 10px #2e2e2e;
+    box-shadow: 3px 3px 10px #00000058;
+
+}
+
+/* widgets */
+.widgets{
+    display: block;
+    position: absolute;
+    background-color: var(--blur-accent);
+    width: fit-content;
+    align-content: space-between;
+    justify-content: space-between;
+    top: 150px;
+    right: 50px;
+    height: 60vh;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #00000058;
+    padding: 20px;
+}
+
+.wallet{
+    position: relative;
+    display: flex;
+    background-color: #3030306e;
+    margin: 10px auto;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 30px;
+    backdrop-filter: blur(3px);
+    box-shadow: 3px 3px 10px #00000058;
+}
+
+.widget{
+    position: relative;
+    background-color: var(--theme);
+    border-radius: 5px;
+    width:max-content;
+    margin: 10px 10px;
+    padding: 10px;
+    box-shadow: 3px 3px 10px #00000058;
+}
+
+.center-block{
+    /* background-color: var(--accent-color); */
+    position: absolute;
+    margin: auto;
+    width: fit-content;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    /* animation: glow 4s ease-in-out infinite; */
+    text-shadow: 0px 0px 15px #fff;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+/* icons */
+.icon{
+    position: absolute;
+    left: 50px;
+    background-color: var(--blur-accent);
+    padding: 10px;
+    box-shadow: 3px 3px 10px #00000058;
+}
+
+/* modals */
+.modal{
+
+}

@@ -1,0 +1,11 @@
+{
+    "current":{
+        "light": 12,
+        "water": 2,
+        "gas":150
+
+},
+    "contract":{
+        "address":""
+}
+}

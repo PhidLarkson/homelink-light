@@ -1,0 +1,23 @@
+{
+    "current": {
+        "host": "0.0.0.0",
+        "port": 3201,
+        "last_set": null
+    },
+
+    "trigger": {
+        "host":null,
+        "port":null,
+        "last_revert": null
+    },
+
+    "reverts": {
+        "frequency": null,
+        "num_reverts": null,
+        "state": null,
+        "latter_severity": null,
+        "general_severity": null,
+        "host_acrhive": ["0.0.0.0", "127.0.0.1"],
+        "port_archive": [3201]
+    }
+} 

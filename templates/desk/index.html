@@ -1,0 +1,135 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>HOMELINK OS</title>
+</head>
+<body>
+    <div class="statusbar">
+        <div class="notification-icon">
+            {{note}}
+        </div> 
+        <div class="time">{{time}}</div>
+    </div>
+
+    <div class="main container">
+        <div class="icon" style="top: 100px;">
+            <a href="#" id="profile-button">PROFILE</a>
+            
+        </div>
+        <div class="icon" style="top: 200px;">
+            <a href="#" id="ai-button">AI ASSISTANT</a>
+            
+        </div>
+        <div class="icon" style="top: 300px;">
+            CONTROLS
+        </div>
+        <div class="icon" style="top: 400px;">
+            BILLS
+        </div>
+        <div class="icon" style="top: 500px;">
+            SURVEILLANCE
+        </div>
+        <div class="icon" style="top: 600px;">
+            SETTINGS
+        </div>
+
+
+        <div class="center-block">
+            {{data}}
+        </div>
+
+        <div class="widgets">
+            <div class="wallet">
+                <span id="wallet-address-pill">0x...1234 | <a href="#" id="wallet-button">Connect wallet</a></span>
+            </div><hr>
+            <div class="widget">
+                    WIDGET #1
+                    <div>{{weather}}</div>
+            </div>
+            <div class="widget">
+                WIDGET #2
+                <div>{{utilityusage_TimexBilling}}</div>
+        </div>
+        <div class="widget">
+            WIDGET #3
+            <div>
+                {{notes}}
+            </div>
+    </div>
+    <hr>
+    <div>
+        <h3>OVERVIEW</h3><hr>
+    </div>
+        </div>
+    </div>
+    <div class="taskbar">
+        <div class="system">
+            {{system}}
+        </div>
+        <div class="agent">
+            {{ai}}
+        </div>
+        <div class="notes">
+            {{important}}
+        </div>
+    </div>
+
+
+    <div class="popover hidden" id="profile-popover">
+        <div class="popover-header">
+            <h2>Profile</h2>
+            <button id="close-profile-popover">&times;</button>
+        </div>
+        <div class="popover-content">
+            <div class="profile-info">
+                <img src="https://via.placeholder.com/100" alt="Profile Picture" class="profile-pic">
+                <h3 id="profile-name">Prince Larbi</h3>
+                <p id="profile-description">Enthusiastic techie, blockchain aficionado, and smart home geek.</p>
+                <div class="badges">
+                    <span class="badge">Contributor</span>
+                    <span class="badge">Early Adopter</span>
+                    <span class="badge">Community Leader</span>
+                </div>
+                <button class="edit-profile-btn" id="edit-profile-btn">Edit Profile</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popover hidden" id="ai-popover">
+        <div class="popover-header">
+            <h2>JALI AI</h2>
+            <button id="close-ai-popover">&times;</button>
+        </div>
+        <div class="popover-content">
+            <div class="ai-info">
+                <div class="chat-area">MESSAGES</div>
+
+                </div>
+                <form action="" method="post">
+                    <input type="text" name="" id="" placeholder="Ask JALI anything...">
+                    <input type="button" value="ASK">
+                </form>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="popover hidden" id="wallet-popover">
+        <div class="popover-header">
+            <h3>Connect Wallet</h3>
+            <button id="close-wallet-popover">&times;</button>
+        </div>
+        <div class="popover-content">
+            <button id="metamask-button" class="wallet-option-btn">MetaMask</button>
+            <button id="walletconnect-button" class="wallet-option-btn">WalletConnect</button>
+            <p>Connected Wallet: <span id="wallet-address">Not connected</span></p>
+        </div>
+    </div>
+    
+</body>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script src="{{ url_for('static', filename='js/popovers.js') }}"></script>
+</html>
